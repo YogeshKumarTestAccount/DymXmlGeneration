@@ -1,0 +1,163 @@
+<soapenv:Envelope xmlns:ord="http://xmlns.oracle.com/communications/ordermanagement" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+    <soapenv:Header>
+        <wsse:Security soapenv:mustUnderstand="1" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+            <wsse:UsernameToken wsu:Id="UsernameToken-1">
+                <wsse:Username>${#Project#OSM_USERNAME}</wsse:Username>
+                <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">${#Project#OSM_PASSWORD}</wsse:Password>
+            </wsse:UsernameToken>
+        </wsse:Security>
+    </soapenv:Header>
+    <soapenv:Body>
+        <ord:CreateOrder xmlns:ord="http://xmlns.oracle.com/communications/ordermanagement">
+            <msg>
+                <head>
+                    <Client>IOTCharCorp</Client>
+                    <RoutingArea>8313</RoutingArea>
+                    <Source>SODI</Source>
+                    <Destination>SODI NG</Destination>
+                    <Version>2.22</Version>
+                    <RoundTrip>Tsk=SODI NG|Oid=${#TestSuite#CSGOrderId}</RoundTrip>
+                </head>
+                <body>
+                    <ProvisionableOrderUpdated>
+                        <Business>
+                            <BusinessUnit>835310000010</BusinessUnit>
+                        </Business>
+                        <Customer>
+                            <CustomerId>${#TestSuite#CustomerId}</CustomerId>
+                            <Type>RES</Type>
+                            <Name>
+                                <Salutation>U</Salutation>
+                                <Full>CULLERS,RUSTY</Full>
+                            </Name>
+                        </Customer>
+                        <Location>
+                            <LocationId>37174000059949</LocationId>
+                            <TypeClassification>AA</TypeClassification>
+                            <Address>
+                                <Line1>114 CEDAR POINT DR</Line1>
+                                <Line2>ITSM QA</Line2>
+                                <City>COLUMBIA</City>
+                                <State>TN</State>
+                                <PostalCode>591025768</PostalCode>
+                                <Status>VALID</Status>
+                                <Parsed>
+                                    <HouseNumber>114</HouseNumber>
+                                    <Street>CEDAR POINT</Street>
+                                    <StreetSuffix>DR</StreetSuffix>
+                                </Parsed>
+                            </Address>
+                            <MSAG>
+                                <Street>CEDAR POINT</Street>
+                                <StreetSuffix>DR</StreetSuffix>
+                                <MSAGCommunity>COLUMBIA</MSAGCommunity>
+                                <PostalCommunity>COLUMBIA</PostalCommunity>
+                            </MSAG>
+                            <Geographical>
+                                <RateArea>COLUMBIA</RateArea>
+                                <TimeZone>00</TimeZone>
+                            </Geographical>
+                        </Location>
+                        <Order>
+                            <OrderId>${#TestSuite#CSGOrderId}</OrderId>
+                            <Class>S</Class>
+                            <Status>OP</Status>
+                            <Version>1</Version>
+                            <DueDate>${#TestSuite#DueDate}</DueDate>
+                            <EquipmentChanged>Y</EquipmentChanged>
+                        </Order>
+                        <AccountList>
+                            <Account>
+                                <AccountId>${#TestSuite#AccountId}</AccountId>
+                                <ClassificationSubType/>
+                                <Type>RES</Type>
+                                <Status>NC</Status>
+                                <Phone>
+                                    <Primary>9999999999</Primary>
+                                </Phone>
+                                <BillTo>
+                                    <Name>
+                                        <Salutation>U</Salutation>
+                                        <First>RUSTY</First>
+                                        <Last>CULLERS</Last>
+                                    </Name>
+                                    <StatementNameFormat>2</StatementNameFormat>
+                                    <Address>
+                                        <Line1>114 CEDAR POINT DR</Line1>
+                                        <Line2>ITSM QA</Line2>
+                                        <City>COLUMBIA</City>
+                                        <State>TN</State>
+                                        <PostalCode>37174</PostalCode>
+                                    </Address>
+                                </BillTo>
+                                <NonPay>N</NonPay>
+                            </Account>
+                        </AccountList>
+                        <ItemList>
+                            <Item>
+                                <ServiceIdentifier>000005</ServiceIdentifier>
+                                <AccountId>${#TestSuite#AccountId}</AccountId>
+                                <EquipmentId>|||</EquipmentId>
+                                <ParentServiceIdentifier>000005</ParentServiceIdentifier>
+                                <WorkPlanItemIdentifier>53053252126712</WorkPlanItemIdentifier>
+                                <HierarchyLevel>ROOT</HierarchyLevel>
+                                <Status>OP</Status>
+                                <ProvisioningCode>${#TestSuite#USOC}</ProvisioningCode>
+                                <ProvisioningCodeDescription>Internet Base</ProvisioningCodeDescription>
+                                <LineOfBusiness>
+                                    <Type>T</Type>
+                                    <SubType>LOCAL</SubType>
+                                </LineOfBusiness>
+                                <DueDate>${#TestSuite#DueDate}</DueDate>
+                                <Restore>N</Restore>
+                                <Action>ADD</Action>
+                            </Item>
+                            <Item>
+                                <ServiceIdentifier>000006</ServiceIdentifier>
+                                <AccountId>${#TestSuite#AccountId}</AccountId>
+                                <EquipmentId>|||</EquipmentId>
+                                <ParentServiceIdentifier>000006</ParentServiceIdentifier>
+                                <WorkPlanItemIdentifier>53053252126712</WorkPlanItemIdentifier>
+                                <HierarchyLevel>ROOT</HierarchyLevel>
+                                <Status>OP</Status>
+                                <ProvisioningCode>${#TestSuite#USOC}</ProvisioningCode>
+                                <ProvisioningCodeDescription>Internet Base</ProvisioningCodeDescription>
+                                <LineOfBusiness>
+                                    <Type>T</Type>
+                                    <SubType>LOCAL</SubType>
+                                </LineOfBusiness>
+                                <DueDate>${#TestSuite#DueDate}</DueDate>
+                                <Restore>N</Restore>
+                                <Action>ADD</Action>
+                            </Item>
+							 <Item>
+                                <ServiceIdentifier>000007</ServiceIdentifier>
+                                <AccountId>${#TestSuite#AccountId}</AccountId>
+                                <EquipmentId>|||</EquipmentId>
+                                <ParentServiceIdentifier>000007</ParentServiceIdentifier>
+                                <WorkPlanItemIdentifier>53053252126712</WorkPlanItemIdentifier>
+                                <HierarchyLevel>ROOT</HierarchyLevel>
+                                <Status>OP</Status>
+                                <ProvisioningCode>${#TestSuite#USOC}</ProvisioningCode>
+                                <ProvisioningCodeDescription>Internet Base</ProvisioningCodeDescription>
+                                <LineOfBusiness>
+                                    <Type>T</Type>
+                                    <SubType>LOCAL</SubType>
+                                </LineOfBusiness>
+                                <DueDate>${#TestSuite#DueDate}</DueDate>
+                                <Restore>N</Restore>
+                                <Action>ADD</Action>
+                            </Item>
+
+                            
+                        </ItemList>
+                        <Vendor>
+                            <InterfaceIdentifier>SODI NG</InterfaceIdentifier>
+                        </Vendor>
+                    </ProvisionableOrderUpdated>
+                </body>
+            </msg>
+        </ord:CreateOrder>
+    </soapenv:Body>
+</soapenv:Envelope>
+

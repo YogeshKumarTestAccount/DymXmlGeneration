@@ -1,0 +1,149 @@
+<ord:CreateOrder
+    xmlns:ord="http://xmlns.oracle.com/communications/ordermanagement">
+    <msg>
+        <head>
+            <Client>IOTCharCorp</Client>
+            <RoutingArea>8313</RoutingArea>
+            <Source>SODI</Source>
+            <Destination>SODI NG</Destination>
+            <Version>2.22</Version>
+            <RoundTrip>Tsk=SODI NG|Oid=1445550101150842</RoundTrip>
+        </head>
+        <body>
+            <ProvisionableOrderUpdated>
+                <Business>
+                    <BusinessUnit>835310000010</BusinessUnit>
+                </Business>
+                <Customer>
+                    <CustomerId>1220101150842</CustomerId>
+                    <Type>RES</Type>
+                    <Name>
+                        <Salutation>U</Salutation>
+                        <Full>CULLERS,RUSTY</Full>
+                    </Name>
+                </Customer>
+                <Location>
+                    <LocationId>37174000059949</LocationId>
+                    <TypeClassification>AA</TypeClassification>
+                    <Address>
+                        <Line1>114 CEDAR POINT DR</Line1>
+                        <Line2>ITSM QA</Line2>
+                        <City>COLUMBIA</City>
+                        <State>TN</State>
+                        <PostalCode>591025768</PostalCode>
+                        <Status>VALID</Status>
+                        <Parsed>
+                            <HouseNumber>114</HouseNumber>
+                            <Street>CEDAR POINT</Street>
+                            <StreetSuffix>DR</StreetSuffix>
+                        </Parsed>
+                    </Address>
+                    <MSAG>
+                        <Street>CEDAR POINT</Street>
+                        <StreetSuffix>DR</StreetSuffix>
+                        <MSAGCommunity>COLUMBIA</MSAGCommunity>
+                        <PostalCommunity>COLUMBIA</PostalCommunity>
+                    </MSAG>
+                    <Geographical>
+                        <RateArea>COLUMBIA</RateArea>
+                        <TimeZone>00</TimeZone>
+                    </Geographical>
+                </Location>
+                <Order>
+                    <OrderId>1445550101150842</OrderId>
+                    <Class>S</Class>
+                    <Status>OP</Status>
+                    <Version>1</Version>
+                    <DueDate>2017-07-18</DueDate>
+                    <EquipmentChanged>Y</EquipmentChanged>
+                </Order>
+                <AccountList>
+                    <Account>
+                        <AccountId>8245120101150842</AccountId>
+                        <ClassificationSubType/>
+                        <Type>RES</Type>
+                        <Status>NC</Status>
+                        <Phone>
+                            <Primary>9999999999</Primary>
+                        </Phone>
+                        <BillTo>
+                            <Name>
+                                <Salutation>U</Salutation>
+                                <First>RUSTY</First>
+                                <Last>CULLERS</Last>
+                            </Name>
+                            <StatementNameFormat>2</StatementNameFormat>
+                            <Address>
+                                <Line1>114 CEDAR POINT DR</Line1>
+                                <Line2>ITSM QA</Line2>
+                                <City>COLUMBIA</City>
+                                <State>TN</State>
+                                <PostalCode>37174</PostalCode>
+                            </Address>
+                        </BillTo>
+                        <NonPay>N</NonPay>
+                    </Account>
+                </AccountList>
+                <ItemList>
+                    <Item>
+                        <ServiceIdentifier>000005</ServiceIdentifier>
+                        <AccountId>8245120101150842</AccountId>
+                        <EquipmentId>|||</EquipmentId>
+                        <ParentServiceIdentifier>000005</ParentServiceIdentifier>
+                        <WorkPlanItemIdentifier>53053252126712</WorkPlanItemIdentifier>
+                        <HierarchyLevel>ROOT</HierarchyLevel>
+                        <Status>OP</Status>
+                        <ProvisioningCode>ILITE</ProvisioningCode>
+                        <ProvisioningCodeDescription>Internet Base</ProvisioningCodeDescription>
+                        <LineOfBusiness>
+                            <Type>T</Type>
+                            <SubType>LOCAL</SubType>
+                        </LineOfBusiness>
+                        <DueDate>2017-07-18</DueDate>
+                        <Restore>N</Restore>
+                        <Action>ADD</Action>
+                    </Item>
+                    <Item>
+                        <ServiceIdentifier>000006</ServiceIdentifier>
+                        <AccountId>824512010115089942</AccountId>
+                        <EquipmentId>|||</EquipmentId>
+                        <ParentServiceIdentifier>000005</ParentServiceIdentifier>
+                        <WorkPlanItemIdentifier>53053252126712</WorkPlanItemIdentifier>
+                        <HierarchyLevel>ROOT</HierarchyLevel>
+                        <Status>OP</Status>
+                        <ProvisioningCode>ILITE</ProvisioningCode>
+                        <ProvisioningCodeDescription>Internet Base</ProvisioningCodeDescription>
+                        <LineOfBusiness>
+                            <Type>T</Type>
+                            <SubType>LOCAL</SubType>
+                        </LineOfBusiness>
+                        <DueDate>2017-07-18</DueDate>
+                        <Restore>N</Restore>
+                        <Action>ADD</Action>
+                    </Item>
+                    <Item>
+                        <ServiceIdentifier>000007</ServiceIdentifier>
+                        <AccountId>82451201011508042</AccountId>
+                        <EquipmentId>|||</EquipmentId>
+                        <ParentServiceIdentifier>000005</ParentServiceIdentifier>
+                        <WorkPlanItemIdentifier>53053252126712</WorkPlanItemIdentifier>
+                        <HierarchyLevel>ROOT</HierarchyLevel>
+                        <Status>OP</Status>
+                        <ProvisioningCode>ILITE</ProvisioningCode>
+                        <ProvisioningCodeDescription>Internet Base</ProvisioningCodeDescription>
+                        <LineOfBusiness>
+                            <Type>T</Type>
+                            <SubType>LOCAL</SubType>
+                        </LineOfBusiness>
+                        <DueDate>2017-07-18</DueDate>
+                        <Restore>N</Restore>
+                        <Action>ADD</Action>
+                    </Item>
+                </ItemList>
+                <Vendor>
+                    <InterfaceIdentifier>SODI NG</InterfaceIdentifier>
+                </Vendor>
+            </ProvisionableOrderUpdated>
+        </body>
+    </msg>
+</ord:CreateOrder>

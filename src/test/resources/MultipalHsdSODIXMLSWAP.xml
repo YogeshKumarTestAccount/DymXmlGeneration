@@ -1,0 +1,32 @@
+<soapenv:Envelope xmlns:ord="http://xmlns.oracle.com/communications/ordermanagement" xmlns:soapenv="http://schemas.xmlsoap.org/soap/envelope/">
+   <soapenv:Header>
+      <wsse:Security soapenv:mustUnderstand="1" xmlns:wsse="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd">
+         <wsse:UsernameToken wsu:Id="UsernameToken-201D9653BCEB3D787414803357263294">
+            <wsse:Username>${#Project#OSM_USERNAME}</wsse:Username>
+            <wsse:Password Type="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-username-token-profile-1.0#PasswordText">${#Project#OSM_PASSWORD}</wsse:Password>
+         </wsse:UsernameToken>
+      </wsse:Security>
+   </soapenv:Header>
+   <soapenv:Body>
+      <ord:CreateOrder>
+         <ActivationChannelRequest>
+            <ProvisioningId>12320015560591</ProvisioningId>
+            <RequestCreationTime>9999-99-99T00:00:00.00</RequestCreationTime>
+            <ActionType>RESET</ActionType>
+            <ServiceType>internet</ServiceType>
+            <NetworkImpact>N</NetworkImpact>
+            <OrderId>${#TestSuite#CSGOrderId}</OrderId>
+            <ClientId>835140000030</ClientId>
+            <AuditUser>TestUser</AuditUser>
+            <CustomerId>${#TestSuite#CustomerId}</CustomerId>
+            <AccountId>${#TestSuite#AccountId}</AccountId>
+            <CmMac>${#TestSuite#CmMac}</CmMac>
+            <ServicesList>
+               <Internet>
+                  <ServiceId>$999999999_7777777777_88888888</ServiceId>
+               </Internet>
+            </ServicesList>
+         </ActivationChannelRequest>
+      </ord:CreateOrder>
+   </soapenv:Body>
+</soapenv:Envelope>
